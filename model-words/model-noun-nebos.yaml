@@ -1,0 +1,18 @@
+sg:
+  nom: nebos
+  voc: nebos
+  acc: nebos
+  gen: nebesos
+  abl: nebesed
+  dat: nebesei
+  loc: nebesi
+  ins: nebese
+pl:
+  nom: nebesa
+  voc: nebesa
+  acc: nebesa
+  gen: nebesom
+  abl: nebesmos
+  dat: nebesmos
+  loc: nebesu
+  ins: nebesbi
