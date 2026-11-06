@@ -1,0 +1,140 @@
+act:
+  ind:
+    pres:
+      1sg: bero
+      2sg: beresi
+      3sg: bereti
+      1pl: beromos
+      2pl: berete
+      3pl: beronti
+    impf:
+      1sg: berom
+      2sg: beres
+      3sg: beret
+      1pl: berome
+      2pl: berete
+      3pl: beront
+    aor:
+      1sg: berostom
+      2sg: berostes
+      3sg: berostet
+      1pl: berostome
+      2pl: berostete
+      3pl: berostont
+    perf:
+      1sg: bereka
+      2sg: berekta
+      3sg: bereke
+      1pl: berekme
+      2pl: bereke
+      3pl: bereker
+  subj:
+    pres:
+      1sg: beroim
+      2sg: berois
+      3sg: beroit
+      1pl: beroime
+      2pl: beroite
+      3pl: beroint
+    aor:
+      1sg: berostoim
+      2sg: berostois
+      3sg: berostoit
+      1pl: berostoime
+      2pl: berostoite
+      3pl: berostoint
+    perf:
+      1sg: berekiem
+      2sg: berekies
+      3sg: berekiet
+      1pl: berekime
+      2pl: berekite
+      3pl: berekient
+  imp:
+    pres:
+      2sg: bere
+      2pl: berete
+    aor:
+      2sg: beroste
+      2pl: berostete
+    perf:
+      2sg: berek
+      2pl: berekte
+  part:
+    pres: beronts
+    aor: berostonts
+    perf: berekvos
+  inf:
+    pres: bereni
+    aor: berosteni
+    perf: berekni
+pas:
+  ind:
+    pres:
+      1sg: berar
+      2sg: beretar
+      3sg: beretor
+      1pl: beromosda
+      2pl: beredave
+      3pl: berontor
+    impf:
+      1sg: bera
+      2sg: bereta
+      3sg: bereto
+      1pl: beromeda
+      2pl: beredave
+      3pl: beronto
+    aor:
+      1sg: berosta
+      2sg: berosteta
+      3sg: berosteto
+      1pl: berostomeda
+      2pl: berostedave
+      3pl: berostonto
+    perf:
+      1sg: bereka
+      2sg: berekta
+      3sg: berekto
+      1pl: berekmeda
+      2pl: berekdave
+      3pl: berekonto
+  subj:
+    pres:
+      1sg: beroia
+      2sg: beroita
+      3sg: beroito
+      1pl: beroimeda
+      2pl: beroidave
+      3pl: berointo
+    aor:
+      1sg: berostoia
+      2sg: berostoita
+      3sg: berostoito
+      1pl: berostoimeda
+      2pl: berostoidave
+      3pl: berostointo
+    perf:
+      1sg: berekia
+      2sg: berekita
+      3sg: berekito
+      1pl: berekimeda
+      2pl: berekidave
+      3pl: berekinto
+  imp:
+    pres:
+      2sg: bereso
+      2pl: beredave
+    aor:
+      2sg: berosteso
+      2pl: berostedave
+    perf:
+      2sg: berekso
+      2pl: berekdave
+  part:
+    pres: beromnos
+    aor: berostos
+    perf: berektos
+  inf:
+    pres: beromeni
+    aor: berostomeni
+    perf: berekmeni

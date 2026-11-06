@@ -1,0 +1,18 @@
+sg:
+  nom: svesor
+  voc: svesor
+  acc: svesorym
+  gen: sustres
+  abl: sustred
+  dat: sustrei
+  loc: sustri
+  ins: sustre
+pl:
+  nom: svesores
+  voc: svesores
+  acc: svesoryns
+  gen: sustrom
+  abl: sustrymos
+  dat: sustrymos
+  loc: sustrysu
+  ins: sustrybi

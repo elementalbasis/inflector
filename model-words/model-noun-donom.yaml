@@ -1,0 +1,18 @@
+sg:
+  nom: donom
+  voc: donom
+  acc: donom
+  gen: donosio
+  abl: donod
+  dat: donoi
+  loc: doni
+  ins: done
+pl:
+  nom: dona
+  voc: dona
+  acc: dona
+  gen: donom
+  abl: donomos
+  dat: donomos
+  loc: donoisu
+  ins: donois

@@ -1,0 +1,18 @@
+sg:
+  nom: mentis
+  voc: menti
+  acc: mentim
+  gen: mynties
+  abl: myntied
+  dat: myntiei
+  loc: mynti
+  ins: myntie
+pl:
+  nom: menties
+  voc: menties
+  acc: mentins
+  gen: myntiom
+  abl: myntimos
+  dat: myntimos
+  loc: myntisu
+  ins: myntibi

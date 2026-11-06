@@ -1,0 +1,18 @@
+sg:
+  nom: dvor
+  voc: dvor
+  acc: dvorym
+  gen: dures
+  abl: dured
+  dat: durei
+  loc: duri
+  ins: dure
+pl:
+  nom: dvores
+  voc: dvores
+  acc: dvoryns
+  gen: durom
+  abl: durmos
+  dat: durmos
+  loc: dursu
+  ins: durbi

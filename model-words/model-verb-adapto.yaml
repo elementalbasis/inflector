@@ -1,0 +1,140 @@
+act:
+  ind:
+    pres:
+      1sg: adapto
+      2sg: adaptasi
+      3sg: adaptati
+      1pl: adaptamos
+      2pl: adaptate
+      3pl: adaptanti
+    impf:
+      1sg: adaptom
+      2sg: adaptas
+      3sg: adaptat
+      1pl: adaptame
+      2pl: adaptate
+      3pl: adaptant
+    aor:
+      1sg: adaptastom
+      2sg: adaptastes
+      3sg: adaptastet
+      1pl: adaptastome
+      2pl: adaptastete
+      3pl: adaptastont
+    perf:
+      1sg: adaptaka
+      2sg: adaptakta
+      3sg: adaptake
+      1pl: adaptakme
+      2pl: adaptake
+      3pl: adaptaker
+  subj:
+    pres:
+      1sg: adaptaim
+      2sg: adaptais
+      3sg: adaptait
+      1pl: adaptaime
+      2pl: adaptaite
+      3pl: adaptaint
+    aor:
+      1sg: adaptastoim
+      2sg: adaptastois
+      3sg: adaptastoit
+      1pl: adaptastoime
+      2pl: adaptastoite
+      3pl: adaptastoint
+    perf:
+      1sg: adaptakiem
+      2sg: adaptakies
+      3sg: adaptakiet
+      1pl: adaptakime
+      2pl: adaptakite
+      3pl: adaptakient
+  imp:
+    pres:
+      2sg: adapta
+      2pl: adaptate
+    aor:
+      2sg: adaptaste
+      2pl: adaptastete
+    perf:
+      2sg: adaptak
+      2pl: adaptakte
+  part:
+    pres: adaptants
+    aor: adaptastonts
+    perf: adaptakvos
+  inf:
+    pres: adaptani
+    aor: adaptasteni
+    perf: adaptakni
+pas:
+  ind:
+    pres:
+      1sg: adaptar
+      2sg: adaptatar
+      3sg: adaptator
+      1pl: adaptamosda
+      2pl: adaptadave
+      3pl: adaptantor
+    impf:
+      1sg: adapta
+      2sg: adaptata
+      3sg: adaptato
+      1pl: adaptameda
+      2pl: adaptadave
+      3pl: adaptanto
+    aor:
+      1sg: adaptasta
+      2sg: adaptasteta
+      3sg: adaptasteto
+      1pl: adaptastomeda
+      2pl: adaptastedave
+      3pl: adaptastonto
+    perf:
+      1sg: adaptaka
+      2sg: adaptakta
+      3sg: adaptakto
+      1pl: adaptakmeda
+      2pl: adaptakdave
+      3pl: adaptakonto
+  subj:
+    pres:
+      1sg: adaptaia
+      2sg: adaptaita
+      3sg: adaptaito
+      1pl: adaptaimeda
+      2pl: adaptaidave
+      3pl: adaptainto
+    aor:
+      1sg: adaptastoia
+      2sg: adaptastoita
+      3sg: adaptastoito
+      1pl: adaptastoimeda
+      2pl: adaptastoidave
+      3pl: adaptastointo
+    perf:
+      1sg: adaptakia
+      2sg: adaptakita
+      3sg: adaptakito
+      1pl: adaptakimeda
+      2pl: adaptakidave
+      3pl: adaptakinto
+  imp:
+    pres:
+      2sg: adaptaso
+      2pl: adaptadave
+    aor:
+      2sg: adaptasteso
+      2pl: adaptastedave
+    perf:
+      2sg: adaptakso
+      2pl: adaptakdave
+  part:
+    pres: adaptamnos
+    aor: adaptastos
+    perf: adaptaktos
+  inf:
+    pres: adaptameni
+    aor: adaptastomeni
+    perf: adaptakmeni

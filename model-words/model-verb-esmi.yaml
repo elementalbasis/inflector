@@ -1,0 +1,70 @@
+act:
+  ind:
+    pres:
+      - esmi
+      - esi
+      - esti
+      - esmos
+      - este
+      - senti
+    impf:
+      - esym
+      - es
+      - est
+      - esme
+      - este
+      - sent
+    aor:
+      - bum
+      - bus
+      - but
+      - bume
+      - bute
+      - bunt
+    perf:
+      - bebuka
+      - bebukta
+      - bebuke
+      - bebukme
+      - bebuke
+      - bebuker
+  subj:
+    pres:
+      - siem
+      - sies
+      - siet
+      - sime
+      - site
+      - sient
+    aor:
+      - buiem
+      - buies
+      - buiet
+      - buime
+      - buite
+      - buient
+    perf:
+      - bebukiem
+      - bebukies
+      - bebukiet
+      - bebukime
+      - bebukite
+      - bebukient
+  imp:
+    pres:
+      - es
+      - este
+    aor:
+      - bu
+      - bute
+    perf:
+      - bebuk
+      - bebukte
+  part:
+    pres: sonts
+    aor: bunts
+    perf: bebukvos
+  inf:
+    pres: esni
+    aor: buni
+    perf: bebukni

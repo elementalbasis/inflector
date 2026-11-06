@@ -1,0 +1,18 @@
+sg:
+  nom: bena
+  voc: benu
+  acc: benam
+  gen: benas
+  abl: benad
+  dat: benai
+  loc: beni
+  ins: bene
+pl:
+  nom: benai
+  voc: benai
+  acc: benans
+  gen: benom
+  abl: benamos
+  dat: benamos
+  loc: benasu
+  ins: benabi

@@ -1,0 +1,18 @@
+sg:
+  nom: nomyn
+  voc: nomyn
+  acc: nomyn
+  gen: nymens
+  abl: nymened
+  dat: nymenei
+  loc: nymeni
+  ins: nymene
+pl:
+  nom: nomyna
+  voc: nomyna
+  acc: nomyna
+  gen: nymenom
+  abl: nymenmos
+  dat: nymenmos
+  loc: nymensu
+  ins: nymenbi

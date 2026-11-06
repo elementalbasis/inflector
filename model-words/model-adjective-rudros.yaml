@@ -1,0 +1,57 @@
+m:
+  sg:
+    nom: rudros
+    voc: rudre
+    acc: rudrom
+    gen: rudrosio
+    abl: rudrod
+    dat: rudroi
+    loc: rudri
+    ins: rudre
+  pl:
+    nom: rudroi
+    voc: rudroi
+    acc: rudrons
+    gen: rudrom
+    abl: rudromos
+    dat: rudromos
+    loc: rudroisu
+    ins: rudrois
+f:
+  sg:
+    nom: rudra
+    voc: rudru
+    acc: rudram
+    gen: rudras
+    abl: rudrad
+    dat: rudrai
+    loc: rudri
+    ins: rudre
+  pl:
+    nom: rudrai
+    voc: rudrai
+    acc: rudrans
+    gen: rudrom
+    abl: rudramos
+    dat: rudramos
+    loc: rudrasu
+    ins: rudrabi
+n:
+  sg:
+    nom: rudrom
+    voc: rudrom
+    acc: rudrom
+    gen: rudrosio
+    abl: rudrod
+    dat: rudroi
+    loc: rudri
+    ins: rudre
+  pl:
+    nom: rudra
+    voc: rudra
+    acc: rudra
+    gen: rudrom
+    abl: rudromos
+    dat: rudromos
+    loc: rudroisu
+    ins: rudrois

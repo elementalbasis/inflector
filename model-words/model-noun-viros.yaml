@@ -1,0 +1,18 @@
+sg:
+  nom: viros
+  voc: vire
+  acc: virom
+  gen: virosio
+  abl: virod
+  dat: viroi
+  loc: viri
+  ins: vire
+pl:
+  nom: viroi
+  voc: viroi
+  acc: virons
+  gen: virom
+  abl: viromos
+  dat: viromos
+  loc: viroisu
+  ins: virois

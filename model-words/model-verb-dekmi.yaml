@@ -1,0 +1,140 @@
+act:
+  ind:
+    pres:
+      - dekmi
+      - deksi
+      - dekti
+      - dykmos
+      - dykte
+      - dykenti
+    impf:
+      - dekym
+      - deks
+      - dekt
+      - dykmos
+      - dykte
+      - dykent
+    aor:
+      - masjym
+      - masjs
+      - masjt
+      - mysjme
+      - mysjte
+      - mysjent
+    perf:
+      - memosja
+      - memosjta
+      - memosje
+      - memysjme
+      - memysje
+      - memysjer
+  subj:
+    pres:
+      - dykiem
+      - dykies
+      - dykiet
+      - dykime
+      - dykite
+      - dykient
+    aor:
+      - mysjiem
+      - mysjies
+      - mysjiet
+      - mysjime
+      - mysjite
+      - mysjient
+    perf:
+      - memysjiem
+      - memysjies
+      - memysjiet
+      - memysjime
+      - memysjite
+      - memysjient
+  imp:
+    pres:
+      - dek
+      - dykte
+    aor:
+      - masj
+      - mysjte
+    perf:
+      - memosj
+      - memysjte
+  part:
+    pres: dykonts
+    aor: mysjonts
+    perf: memysjvos
+  inf:
+    pres: dekni
+    aor: masjni
+    perf: memosjni
+pas:
+  ind:
+    pres:
+      - dykar
+      - dyktar
+      - dyktor
+      - dykmosda
+      - dykdave
+      - dykentor
+    impf:
+      - dyka
+      - dykta
+      - dykto
+      - dykmeda
+      - dykdave
+      - dykento
+    aor:
+      - mysja
+      - mysjta
+      - mysjto
+      - mysjmeda
+      - mysjdave
+      - mysjento
+    perf:
+      - memysja
+      - memysjta
+      - memysjto
+      - memysjmeda
+      - memysjdave
+      - memysjento
+  subj:
+    pres:
+      - dykia
+      - dykita
+      - dykito
+      - dykimeda
+      - dykidave
+      - dykiento
+    aor:
+      - mysjia
+      - mysjita
+      - mysjito
+      - mysjimeda
+      - mysjidave
+      - mysjiento
+    perf:
+      - memysjia
+      - memysjita
+      - memysjito
+      - memysjimeda
+      - memysjidave
+      - memysjiento
+  imp:
+    pres:
+      - dykso
+      - dykdave
+    aor:
+      - mysjso
+      - mysjdave
+    perf:
+      - memysjso
+      - memysjdave
+  part:
+    pres: dykmynos
+    aor: mysjtos
+    perf: memysjtos
+  inf:
+    pres: dykmeni
+    aor: mysjmeni
+    perf: memysjmeni

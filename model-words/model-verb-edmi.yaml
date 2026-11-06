@@ -1,0 +1,140 @@
+act:
+  ind:
+    pres:
+      - edmi
+      - edsi
+      - edsti
+      - edmos
+      - edste
+      - edenti
+    impf:
+      - edym
+      - eds
+      - edst
+      - edme
+      - edste
+      - edent
+    aor:
+      - brom
+      - bros
+      - brot
+      - bryme
+      - bryte
+      - bront
+    perf:
+      - bebroka
+      - bebrokta
+      - bebroke
+      - bebrykme
+      - bebryke
+      - bebryker
+  subj:
+    pres:
+      - ediem
+      - edies
+      - ediet
+      - edime
+      - edite
+      - edient
+    aor:
+      - briem
+      - bries
+      - briet
+      - brime
+      - brite
+      - brient
+    perf:
+      - bebrykiem
+      - bebrykies
+      - bebrykiet
+      - bebrykime
+      - bebrykite
+      - bebrykient
+  imp:
+    pres:
+      - ed
+      - edste
+    aor:
+      - bro
+      - bryte
+    perf:
+      - bebrok
+      - bebrykte
+  part:
+    pres: edonts
+    aor: bronts
+    perf: bebrykvos
+  inf:
+    pres: edni
+    aor: broni
+    perf: bebrokni
+pas:
+  ind:
+    pres:
+      - edar
+      - edstar
+      - edstor
+      - edmosda
+      - edsdave
+      - edentor
+    impf:
+      - eda
+      - edsta
+      - edsto
+      - edmeda
+      - edsdave
+      - edento
+    aor:
+      - bro
+      - bryta
+      - bryto
+      - brymeda
+      - brydave
+      - bronto
+    perf:
+      - bebryka
+      - bebrykta
+      - bebrykto
+      - bebrykmeda
+      - bebrykdave
+      - bebrykento
+  subj:
+    pres:
+      - edia
+      - edita
+      - edito
+      - edimeda
+      - edidave
+      - ediento
+    aor:
+      - bria
+      - brita
+      - brito
+      - brimeda
+      - bridave
+      - briento
+    perf:
+      - bebrykia
+      - bebrykita
+      - bebrykito
+      - bebrykimeda
+      - bebrykidave
+      - bebrykiento
+  imp:
+    pres:
+      - edso
+      - edsdave
+    aor:
+      - bryso
+      - brydave
+    perf:
+      - bebrykso
+      - bebrykdave
+  part:
+    pres: edmynos
+    aor: brytos
+    perf: bebryktos
+  inf:
+    pres: edmeni
+    aor: brymeni
+    perf: bebrykmeni

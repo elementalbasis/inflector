@@ -1,0 +1,140 @@
+act:
+  ind:
+    pres:
+      - imi
+      - isi
+      - iti
+      - imos
+      - ite
+      - jenti
+    impf:
+      - im
+      - is
+      - it
+      - ime
+      - ite
+      - jent
+    aor:
+      - bem
+      - bes
+      - bet
+      - byme
+      - byte
+      - bent
+    perf:
+      - beboka
+      - bebokta
+      - beboke
+      - bebykme
+      - bebyke
+      - bebyker
+  subj:
+    pres:
+      - jem
+      - jes
+      - jet
+      - ime
+      - ite
+      - jent
+    aor:
+      - biem
+      - bies
+      - biet
+      - bime
+      - bite
+      - bient
+    perf:
+      - bebykiem
+      - bebykies
+      - bebykiet
+      - bebykime
+      - bebykite
+      - bebykient
+  imp:
+    pres:
+      - i
+      - ite
+    aor:
+      - be
+      - byte
+    perf:
+      - bebok
+      - bebykte
+  part:
+    pres: jonts
+    aor: bonts
+    perf: bebykvos
+  inf:
+    pres: ini
+    aor: beni
+    perf: bebokni
+pas:
+  ind:
+    pres:
+      - jar
+      - itar
+      - itor
+      - imosda
+      - imeda
+      - jentor
+    impf:
+      - ja
+      - ita
+      - ito
+      - imeda
+      - idave
+      - jento
+    aor:
+      - ba
+      - byta
+      - byto
+      - bymeda
+      - bydave
+      - bento
+    perf:
+      - bebyka
+      - bebykta
+      - bebykto
+      - bebykmeda
+      - bebykdave
+      - bebykento
+  subj:
+    pres:
+      - ja
+      - ita
+      - ito
+      - imeda
+      - idave
+      - jento
+    aor:
+      - bia
+      - bita
+      - bito
+      - bimeda
+      - bidave
+      - biento
+    perf:
+      - bebykia
+      - bebykita
+      - bebykito
+      - bebykimeda
+      - bebykidave
+      - bebykiento
+  imp:
+    pres:
+      - iso
+      - idave
+    aor:
+      - byso
+      - bydave
+    perf:
+      - bebykso
+      - bebykdave
+  part:
+    pres: imynos
+    aor: bytos
+    perf: bebyktos
+  inf:
+    pres: imeni
+    aor: bymeni
+    perf: bebykmeni

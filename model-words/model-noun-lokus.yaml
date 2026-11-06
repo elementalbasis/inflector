@@ -1,0 +1,18 @@
+sg:
+  nom: lokus
+  voc: loku
+  acc: lokum
+  gen: lykues
+  abl: lykued
+  dat: lykuei
+  loc: lykui
+  ins: lykue
+pl:
+  nom: lokues
+  voc: lokues
+  acc: lokuns
+  gen: lykuom
+  abl: lykumos
+  dat: lykumos
+  loc: lykusu
+  ins: lykubi

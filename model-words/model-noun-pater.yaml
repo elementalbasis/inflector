@@ -1,0 +1,18 @@
+sg:
+  nom: pater
+  voc: pater
+  acc: patrym
+  gen: pytres
+  abl: pytred
+  dat: pytrei
+  loc: pytri
+  ins: pytre
+pl:
+  nom: patres
+  voc: patres
+  acc: patryns
+  gen: pytrom
+  abl: pytrymos
+  dat: pytrymos
+  loc: pytrysu
+  ins: pytrybi
