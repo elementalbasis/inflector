@@ -276,6 +276,53 @@ class Strunumi(Model):
                'act.ind.perf.1pl': 'me',
                }
 
+# Suppletive verb with six principal parts
+class Dekmi(Model):
+    name = 'dekmi'
+    kind = 'verb'
+    endings = {'act.ind.pres.1sg': 'mi',
+               'act.ind.pres.1pl': 'mos',
+               'act.ind.aor.1sg': 'm',
+               'act.ind.aor.1pl': 'me',
+               'act.ind.perf.1sg': 'a',
+               'act.ind.perf.1pl': 'me',
+               }
+
+# Suppletive verb with six principal parts
+class Edmi(Model):
+    name = 'edmi'
+    kind = 'verb'
+    endings = {'act.ind.pres.1sg': 'mi',
+               'act.ind.pres.1pl': 'mos',
+               'act.ind.aor.1sg': 'm',
+               'act.ind.aor.1pl': 'me',
+               'act.ind.perf.1sg': 'a',
+               'act.ind.perf.1pl': 'me',
+               }
+
+# Suppletive verb with an additional present 3pl principal part
+class Esmi(Model):
+    name = 'esmi'
+    kind = 'verb'
+    endings = {'act.ind.pres.1sg': 'mi',
+               'act.ind.pres.1pl': 'mos',
+               'act.ind.pres.3pl': 'nti',
+               'act.ind.aor.1sg': 'm',
+               'act.ind.perf.1sg': 'a',
+               }
+
+# Suppletive verb with six principal parts
+class Imi(Model):
+    name = 'imi'
+    kind = 'verb'
+    endings = {'act.ind.pres.1sg': 'mi',
+               'act.ind.pres.1pl': 'mos',
+               'act.ind.aor.1sg': 'm',
+               'act.ind.aor.1pl': 'me',
+               'act.ind.perf.1sg': 'a',
+               'act.ind.perf.1pl': 'me',
+               }
+
 # Add your new model class to this list.
 MODEL_CLASSES = [
     Viros,
@@ -298,6 +345,10 @@ MODEL_CLASSES = [
     Lipnumi,
     Sjlinumi,
     Strunumi,
+    Dekmi,
+    Edmi,
+    Esmi,
+    Imi,
 ]
 MODELS = {model.name: model for model in MODEL_CLASSES}
 
