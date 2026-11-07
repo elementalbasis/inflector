@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-'''Small model-word inflector. Requires PyYAML; no dictionary needed.'''
-import argparse
-import json
+'''Model-word inflection and dictionary model-reference resolution.'''
+from collections.abc import Mapping
+from copy import copy, deepcopy
+import unicodedata
 from itertools import product
 from pathlib import Path
 
@@ -18,7 +19,7 @@ def leaves(tree, path=()):
     elif isinstance(tree, str):
         yield path, tree
     else:
-        raise ValueError(f'Expected a word at {'.'.join(path)}')
+        raise ValueError(f"Expected a word at {'.'.join(path)}")
 
 # Put generated forms back into the nested tree.
 def rebuild(tree, forms, path=()):
@@ -92,8 +93,13 @@ class Model:
         choices = []
         for anchor, part in zip(anchors, parts):
             if anchor not in self.cells:
-                raise ValueError(f'Missing model principal part: {'.'.join(anchor)}')
+                raise ValueError(f"Missing model principal part: {'.'.join(anchor)}")
             choices.append(list(substitutions(self.cells[anchor], part)))
+
+        # Identity needs no inferred stem substitutions. This also preserves
+        # suppletive cells not covered by any principal-part prefix.
+        if all(self.cells[path] == part for path, part in zip(anchors, parts)):
+            return self.table
 
         # Maximize total shared suffix length, subject to explaining every cell
         # and reproducing every supplied principal part exactly.
@@ -280,47 +286,48 @@ class Strunumi(Model):
 class Dekmi(Model):
     name = 'dekmi'
     kind = 'verb'
-    endings = {'act.ind.pres.1sg': 'mi',
-               'act.ind.pres.1pl': 'mos',
-               'act.ind.aor.1sg': 'm',
-               'act.ind.aor.1pl': 'me',
-               'act.ind.perf.1sg': 'a',
-               'act.ind.perf.1pl': 'me',
+    endings = {'act.ind.pres.1sg': 'dekmi',
+               'act.ind.pres.1pl': 'dykmos',
+               'act.ind.aor.1sg': 'masjym',
+               'act.ind.aor.1pl': 'mysjme',
+               'act.ind.perf.1sg': 'memosja',
+               'act.ind.perf.1pl': 'memysjme',
                }
 
 # Suppletive verb with six principal parts
 class Edmi(Model):
     name = 'edmi'
     kind = 'verb'
-    endings = {'act.ind.pres.1sg': 'mi',
-               'act.ind.pres.1pl': 'mos',
-               'act.ind.aor.1sg': 'm',
-               'act.ind.aor.1pl': 'me',
-               'act.ind.perf.1sg': 'a',
-               'act.ind.perf.1pl': 'me',
+    endings = {'act.ind.pres.1sg': 'edmi',
+               'act.ind.pres.1pl': 'edmos',
+               'act.ind.aor.1sg': 'brom',
+               'act.ind.aor.1pl': 'bryme',
+               'act.ind.perf.1sg': 'bebroka',
+               'act.ind.perf.1pl': 'bebrykme',
                }
 
 # Suppletive verb with an additional present 3pl principal part
 class Esmi(Model):
     name = 'esmi'
     kind = 'verb'
-    endings = {'act.ind.pres.1sg': 'mi',
-               'act.ind.pres.1pl': 'mos',
-               'act.ind.pres.3pl': 'nti',
-               'act.ind.aor.1sg': 'm',
-               'act.ind.perf.1sg': 'a',
+    endings = {'act.ind.pres.1sg': 'esmi',
+               'act.ind.pres.1pl': 'esmos',
+               'act.ind.aor.1sg': 'bum',
+               'act.ind.aor.1pl': 'bute',
+               'act.ind.perf.1sg': 'bebuka',
+               'act.ind.perf.1pl': 'bebukme',
                }
 
 # Suppletive verb with six principal parts
 class Imi(Model):
     name = 'imi'
     kind = 'verb'
-    endings = {'act.ind.pres.1sg': 'mi',
-               'act.ind.pres.1pl': 'mos',
-               'act.ind.aor.1sg': 'm',
-               'act.ind.aor.1pl': 'me',
-               'act.ind.perf.1sg': 'a',
-               'act.ind.perf.1pl': 'me',
+    endings = {'act.ind.pres.1sg': 'imi',
+               'act.ind.pres.1pl': 'imos',
+               'act.ind.aor.1sg': 'bem',
+               'act.ind.aor.1pl': 'byme',
+               'act.ind.perf.1sg': 'beboka',
+               'act.ind.perf.1pl': 'bebykme',
                }
 
 # Add your new model class to this list.
@@ -368,27 +375,92 @@ def choose_model(parts, kind=None):
     return candidates[0]
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('word', help="'word, second part' or '@key(word, second part)'")
-    parser.add_argument('--model', choices=MODELS)
-    parser.add_argument('--typ', choices=('noun', 'adjective', 'verb'))
-    parser.add_argument('--models', type=Path, default=Path(__file__).parent / 'model-words')
-    args = parser.parse_args()
-    text = args.word.strip()
-    if text.startswith('@key(') and text.endswith(')'):
-        text = text[5:-1]
-    parts = [part.strip() for part in text.split(',')]
-    try:
-        if not all(parts):
-            raise ValueError('Principal parts must not be empty')
-        model = args.model or choose_model(parts, args.typ)
-        if args.typ and MODELS[model].kind != args.typ:
-            raise ValueError('--model and --typ disagree')
-        print(json.dumps(MODELS[model](args.models).inflect(parts), ensure_ascii=False, indent=2))
-    except (ValueError, OSError, yaml.YAMLError) as error:
-        parser.exit(1, f'{error}\n')
+def entry_field(entry, name, default=None):
+    """Accept Lexerat entry objects or their JSON dictionary representation."""
+    return entry.get(name, default) if isinstance(entry, Mapping) else getattr(entry, name, default)
 
 
-if __name__ == '__main__':
-    main()
+def normalized(text):
+    return unicodedata.normalize('NFC', text.strip())
+
+
+class Inflector:
+    """Index a dictionary and resolve each immediate model before its child.
+
+    ``inflect(lemma)`` returns a table. ``resolve(lemma)`` returns a model with
+    that table and its principal-part anchors. Input entries are never changed.
+    The optional models mapping can register additional class labels.
+    """
+
+    def __init__(self, entries=(), directory=None, models=None):
+        self.directory = directory
+        self.models = dict(MODELS if models is None else models)
+        self.entries = {}
+        self.cache = {}
+        for entry in entries:
+            if entry_field(entry, 'kind', 'lemma') != 'lemma':
+                continue
+            parts = entry_field(entry, 'forms')
+            if (not isinstance(parts, (list, tuple)) or not parts
+                    or any(not isinstance(part, str) or not part.strip() for part in parts)):
+                raise ValueError('Dictionary entries need nonempty forms')
+            self.entries.setdefault(normalized(parts[0]), []).append(entry)
+
+    @staticmethod
+    def derive(base, name, table):
+        result = copy(base)
+        result.name = name
+        result.table = table
+        result.cells = dict(leaves(table))
+        return result
+
+    @staticmethod
+    def adapt(base, parts):
+        if parts == [base.name]:
+            return base.table
+        if len(parts) == 1 and len(base.endings) > 1:
+            lemma = normalized(parts[0])
+            if not lemma.endswith(base.name):
+                raise ValueError(f'{parts[0]!r} needs principal parts to follow {base.name!r}; '
+                                 'its prefix cannot be inferred')
+            prefix = lemma[:-len(base.name)]
+            # Prefix the complete resolved table, including suppletive forms.
+            return rebuild(base.table, {path: prefix + word for path, word in base.cells.items()})
+        return base.inflect(parts)
+
+    def resolve(self, lemma, trail=()):
+        name = normalized(lemma)
+        if name in trail:
+            raise ValueError('Circular @infl reference: ' + ' -> '.join((*trail, name)))
+        if name in self.cache:
+            return self.cache[name]
+        matches = self.entries.get(name, [])
+        if len(matches) > 1:
+            raise ValueError(f'Ambiguous dictionary lemma: {name!r}')
+        if not matches:
+            if name not in self.models:
+                chain = ' -> '.join((*trail, name))
+                raise ValueError(f'Unknown inflection model: {chain}')
+            base = self.models[name](self.directory)
+            result = self.derive(base, name, base.table)
+        else:
+            entry = matches[0]
+            parts = list(entry_field(entry, 'forms'))
+            reference = entry_field(entry, 'infl')
+            if reference is not None and not isinstance(reference, str):
+                raise ValueError(f'{name!r}: infl must be text')
+            reference = normalized(reference) if reference is not None else ''
+            if not reference or reference == name:
+                if name not in self.models:
+                    raise ValueError(f'{name!r}: no registered model or usable @infl reference')
+                base = self.models[name](self.directory)
+                result = self.derive(base, name, self.adapt(base, parts))
+            else:
+                base = self.resolve(reference, (*trail, name))
+                result = self.derive(base, name, self.adapt(base, parts))
+        self.cache[name] = result
+        return result
+
+    def inflect(self, lemma):
+        """Return an independent table so editing it cannot corrupt the cache."""
+        return deepcopy(self.resolve(lemma).table)
