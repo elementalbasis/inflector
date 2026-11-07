@@ -1,0 +1,140 @@
+act:
+  ind:
+    pres:
+      1sg: lipnumi
+      2sg: lipnusi
+      3sg: lipnuti
+      1pl: lipnumos
+      2pl: lipnute
+      3pl: lipnunti
+    impf:
+      1sg: lipnum
+      2sg: lipnus
+      3sg: lipnut
+      1pl: lipnume
+      2pl: lipnute
+      3pl: lipnunt
+    aor:
+      1sg: lipym
+      2sg: lips
+      3sg: lipt
+      1pl: lipme
+      2pl: lipte
+      3pl: lipent
+    perf:
+      1sg: leloipa
+      2sg: leloipta
+      3sg: leloipe
+      1pl: lelipme
+      2pl: lelipe
+      3pl: leliper
+  subj:
+    pres:
+      1sg: lipnuiem
+      2sg: lipnuies
+      3sg: lipnuiet
+      1pl: lipnuime
+      2pl: lipnuite
+      3pl: lipnuient
+    aor:
+      1sg: lipiem
+      2sg: lipies
+      3sg: lipiet
+      1pl: lipime
+      2pl: lipite
+      3pl: lipient
+    perf:
+      1sg: lelipiem
+      2sg: lelipies
+      3sg: lelipiet
+      1pl: lelipime
+      2pl: lelipite
+      3pl: lelipient
+  imp:
+    pres:
+      2sg: lipnu
+      2pl: lipnute
+    aor:
+      2sg: lip
+      2pl: lipte
+    perf:
+      2sg: leloip
+      2pl: lelipte
+  part:
+    pres: lipnunts
+    aor: liponts
+    perf: lelipvos
+  inf:
+    pres: lipnuni
+    aor: lipni
+    perf: leloipni
+pas:
+  ind:
+    pres:
+      1sg: lipnuar
+      2sg: lipnutar
+      3sg: lipnutor
+      1pl: lipnumosda
+      2pl: lipnumeda
+      3pl: lipnuntor
+    impf:
+      1sg: lipnua
+      2sg: lipnuta
+      3sg: lipnuto
+      1pl: lipnumeda
+      2pl: lipnudave
+      3pl: lipnuento
+    aor:
+      1sg: lipa
+      2sg: lipta
+      3sg: lipto
+      1pl: lipmeda
+      2pl: lipdave
+      3pl: lipento
+    perf:
+      1sg: lelipa
+      2sg: lelipta
+      3sg: lelipto
+      1pl: lelipmeda
+      2pl: lelipdave
+      3pl: lelipento
+  subj:
+    pres:
+      1sg: lipnuia
+      2sg: lipnuita
+      3sg: lipnuito
+      1pl: lipnuimeda
+      2pl: lipnuidave
+      3pl: lipnuiento
+    aor:
+      1sg: lipia
+      2sg: lipita
+      3sg: lipito
+      1pl: lipimeda
+      2pl: lipidave
+      3pl: lipiento
+    perf:
+      1sg: lelipia
+      2sg: lelipita
+      3sg: lelipito
+      1pl: lelipimeda
+      2pl: lelipidave
+      3pl: lelipiento
+  imp:
+    pres:
+      2sg: lipnuso
+      2pl: lipnudave
+    aor:
+      2sg: lipso
+      2pl: lipdave
+    perf:
+      2sg: lelipso
+      2pl: lelipdave
+  part:
+    pres: lipnumnos
+    aor: liptos
+    perf: leliptos
+  inf:
+    pres: lipnumeni
+    aor: lipmeni
+    perf: lelipmeni

@@ -1,0 +1,140 @@
+act:
+  ind:
+    pres:
+      1sg: strunumi
+      2sg: strunusi
+      3sg: strunuti
+      1pl: strunumos
+      2pl: strunute
+      3pl: strununti
+    impf:
+      1sg: strunum
+      2sg: strunus
+      3sg: strunut
+      1pl: strunume
+      2pl: strunute
+      3pl: strununt
+    aor:
+      1sg: strum
+      2sg: strus
+      3sg: strut
+      1pl: strume
+      2pl: strute
+      3pl: strunt
+    perf:
+      1sg: stestruka
+      2sg: stestrukta
+      3sg: stestruke
+      1pl: stestrukme
+      2pl: stestruke
+      3pl: stestruker
+  subj:
+    pres:
+      1sg: strunuiem
+      2sg: strunuies
+      3sg: strunuiet
+      1pl: strunuime
+      2pl: strunuite
+      3pl: strunuient
+    aor:
+      1sg: struiem
+      2sg: struies
+      3sg: struiet
+      1pl: struime
+      2pl: struite
+      3pl: struient
+    perf:
+      1sg: stestrukiem
+      2sg: stestrukies
+      3sg: stestrukiet
+      1pl: stestrukime
+      2pl: stestrukite
+      3pl: stestrukient
+  imp:
+    pres:
+      2sg: strunu
+      2pl: strunute
+    aor:
+      2sg: stru
+      2pl: strute
+    perf:
+      2sg: stestruk
+      2pl: stestrukte
+  part:
+    pres: strununts
+    aor: strunts
+    perf: stestrukvos
+  inf:
+    pres: strununi
+    aor: struni
+    perf: stestrukni
+pas:
+  ind:
+    pres:
+      1sg: strunuar
+      2sg: strunutar
+      3sg: strunutor
+      1pl: strunumosda
+      2pl: strunumeda
+      3pl: strununtor
+    impf:
+      1sg: strunua
+      2sg: strunuta
+      3sg: strunuto
+      1pl: strunumeda
+      2pl: strunudave
+      3pl: strunuento
+    aor:
+      1sg: strua
+      2sg: struta
+      3sg: struto
+      1pl: strumeda
+      2pl: strudave
+      3pl: struento
+    perf:
+      1sg: stestruka
+      2sg: stestrukta
+      3sg: stestrukto
+      1pl: stestrukmeda
+      2pl: stestrukdave
+      3pl: stestrukento
+  subj:
+    pres:
+      1sg: strunuia
+      2sg: strunuita
+      3sg: strunuito
+      1pl: strunuimeda
+      2pl: strunuidave
+      3pl: strunuiento
+    aor:
+      1sg: struia
+      2sg: struita
+      3sg: struito
+      1pl: struimeda
+      2pl: struidave
+      3pl: struiento
+    perf:
+      1sg: stestrukia
+      2sg: stestrukita
+      3sg: stestrukito
+      1pl: stestrukimeda
+      2pl: stestrukidave
+      3pl: stestrukiento
+  imp:
+    pres:
+      2sg: strunuso
+      2pl: strunudave
+    aor:
+      2sg: struso
+      2pl: strudave
+    perf:
+      2sg: stestrukso
+      2pl: stestrukdave
+  part:
+    pres: strunumnos
+    aor: strutos
+    perf: stestruktos
+  inf:
+    pres: strunumeni
+    aor: strumeni
+    perf: stestrukmeni

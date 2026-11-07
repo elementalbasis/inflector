@@ -1,0 +1,140 @@
+act:
+  ind:
+    pres:
+      1sg: megmi
+      2sg: megsi
+      3sg: megti
+      1pl: mygmos
+      2pl: mygte
+      3pl: mygenti
+    impf:
+      1sg: megym
+      2sg: megs
+      3sg: megt
+      1pl: mygme
+      2pl: mygte
+      3pl: mygent
+    aor:
+      1sg: meksym
+      2sg: meks
+      3sg: mekst
+      1pl: myksme
+      2pl: mykste
+      3pl: myksent
+    perf:
+      1sg: memoga
+      2sg: memogta
+      3sg: memoge
+      1pl: memygme
+      2pl: memyge
+      3pl: memyger
+  subj:
+    pres:
+      1sg: mygiem
+      2sg: mygies
+      3sg: mygiet
+      1pl: mygime
+      2pl: mygite
+      3pl: mygient
+    aor:
+      1sg: myksiem
+      2sg: myksies
+      3sg: myksiet
+      1pl: myksime
+      2pl: myksite
+      3pl: myksient
+    perf:
+      1sg: memygiem
+      2sg: memygies
+      3sg: memygiet
+      1pl: memygime
+      2pl: memygite
+      3pl: memygient
+  imp:
+    pres:
+      2sg: meg
+      2pl: mygte
+    aor:
+      2sg: meks
+      2pl: mykste
+    perf:
+      2sg: memog
+      2pl: memygte
+  part:
+    pres: mygonts
+    aor: myksonts
+    perf: memygvos
+  inf:
+    pres: megni
+    aor: meksni
+    perf: memogni
+pas:
+  ind:
+    pres:
+      1sg: mygar
+      2sg: mygtar
+      3sg: mygtor
+      1pl: mygmosda
+      2pl: mygdave
+      3pl: mygentor
+    impf:
+      1sg: myga
+      2sg: mygta
+      3sg: mygto
+      1pl: mygmeda
+      2pl: mygdave
+      3pl: mygento
+    aor:
+      1sg: myksa
+      2sg: myksta
+      3sg: myksto
+      1pl: myksmeda
+      2pl: myksdave
+      3pl: myksento
+    perf:
+      1sg: memyga
+      2sg: memygta
+      3sg: memygto
+      1pl: memygmeda
+      2pl: memygdave
+      3pl: memygento
+  subj:
+    pres:
+      1sg: mygia
+      2sg: mygita
+      3sg: mygito
+      1pl: mygimeda
+      2pl: mygidave
+      3pl: mygiento
+    aor:
+      1sg: myksia
+      2sg: myksita
+      3sg: myksito
+      1pl: myksimeda
+      2pl: myksidave
+      3pl: myksiento
+    perf:
+      1sg: memygia
+      2sg: memygita
+      3sg: memygito
+      1pl: memygimeda
+      2pl: memygidave
+      3pl: memygiento
+  imp:
+    pres:
+      2sg: mygso
+      2pl: mygdave
+    aor:
+      2sg: mykso
+      2pl: myksdave
+    perf:
+      2sg: memygso
+      2pl: memygdave
+  part:
+    pres: mygmynos
+    aor: mykstos
+    perf: memygtos
+  inf:
+    pres: mygmeni
+    aor: myksmeni
+    perf: memygmeni

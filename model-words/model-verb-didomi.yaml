@@ -1,0 +1,140 @@
+act:
+  ind:
+    pres:
+      1sg: didomi
+      2sg: didosi
+      3sg: didoti
+      1pl: didymos
+      2pl: didyte
+      3pl: didonti
+    impf:
+      1sg: didom
+      2sg: didos
+      3sg: didot
+      1pl: didyme
+      2pl: didyte
+      3pl: didont
+    aor:
+      1sg: dom
+      2sg: dos
+      3sg: dot
+      1pl: dyme
+      2pl: dyte
+      3pl: dont
+    perf:
+      1sg: dedoka
+      2sg: dedokta
+      3sg: dedoke
+      1pl: dedykme
+      2pl: dedyke
+      3pl: dedyker
+  subj:
+    pres:
+      1sg: didiem
+      2sg: didies
+      3sg: didiet
+      1pl: didime
+      2pl: didite
+      3pl: didient
+    aor:
+      1sg: diem
+      2sg: dies
+      3sg: diet
+      1pl: dime
+      2pl: dite
+      3pl: dient
+    perf:
+      1sg: dedykiem
+      2sg: dedykies
+      3sg: dedykiet
+      1pl: dedykime
+      2pl: dedykite
+      3pl: dedykient
+  imp:
+    pres:
+      2sg: dido
+      2pl: didyte
+    aor:
+      2sg: do
+      2pl: dyte
+    perf:
+      2sg: dedok
+      2pl: dedykte
+  part:
+    pres: didonts
+    aor: donts
+    perf: dedykvos
+  inf:
+    pres: didoni
+    aor: doni
+    perf: dedokni
+pas:
+  ind:
+    pres:
+      1sg: didar
+      2sg: didytar
+      3sg: didytor
+      1pl: didymosda
+      2pl: didydave
+      3pl: didontor
+    impf:
+      1sg: dida
+      2sg: didyta
+      3sg: didyto
+      1pl: didymeda
+      2pl: didydave
+      3pl: didonto
+    aor:
+      1sg: da
+      2sg: dyta
+      3sg: dyto
+      1pl: dymeda
+      2pl: dydave
+      3pl: donto
+    perf:
+      1sg: dedyka
+      2sg: dedykta
+      3sg: dedykto
+      1pl: dedykmeda
+      2pl: dedykdave
+      3pl: dedykento
+  subj:
+    pres:
+      1sg: didia
+      2sg: didita
+      3sg: didito
+      1pl: didimeda
+      2pl: dididave
+      3pl: didiento
+    aor:
+      1sg: dia
+      2sg: dita
+      3sg: dito
+      1pl: dimeda
+      2pl: didave
+      3pl: diento
+    perf:
+      1sg: dedykia
+      2sg: dedykita
+      3sg: dedykito
+      1pl: dedykimeda
+      2pl: dedykidave
+      3pl: dedykiento
+  imp:
+    pres:
+      2sg: didyso
+      2pl: didydave
+    aor:
+      2sg: dyso
+      2pl: dydave
+    perf:
+      2sg: dedykso
+      2pl: dedykdave
+  part:
+    pres: didymnos
+    aor: dytos
+    perf: dedyktos
+  inf:
+    pres: didymeni
+    aor: dymeni
+    perf: dedykmeni

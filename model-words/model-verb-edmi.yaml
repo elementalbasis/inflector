@@ -1,65 +1,65 @@
 act:
   ind:
     pres:
-      - edmi
-      - edsi
-      - edsti
-      - edmos
-      - edste
-      - edenti
+      1sg: edmi
+      2sg: edsi
+      3sg: edti
+      1pl: edmos
+      2pl: edte
+      3pl: edenti
     impf:
-      - edym
-      - eds
-      - edst
-      - edme
-      - edste
-      - edent
+      1sg: edym
+      2sg: eds
+      3sg: edt
+      1pl: edme
+      2pl: edte
+      3pl: edent
     aor:
-      - brom
-      - bros
-      - brot
-      - bryme
-      - bryte
-      - bront
+      1sg: brom
+      2sg: bros
+      3sg: brot
+      1pl: bryme
+      2pl: bryte
+      3pl: bront
     perf:
-      - bebroka
-      - bebrokta
-      - bebroke
-      - bebrykme
-      - bebryke
-      - bebryker
+      1sg: bebroka
+      2sg: bebrokta
+      3sg: bebroke
+      1pl: bebrykme
+      2pl: bebryke
+      3pl: bebryker
   subj:
     pres:
-      - ediem
-      - edies
-      - ediet
-      - edime
-      - edite
-      - edient
+      1sg: ediem
+      2sg: edies
+      3sg: ediet
+      1pl: edime
+      2pl: edite
+      3pl: edient
     aor:
-      - briem
-      - bries
-      - briet
-      - brime
-      - brite
-      - brient
+      1sg: briem
+      2sg: bries
+      3sg: briet
+      1pl: brime
+      2pl: brite
+      3pl: brient
     perf:
-      - bebrykiem
-      - bebrykies
-      - bebrykiet
-      - bebrykime
-      - bebrykite
-      - bebrykient
+      1sg: bebrykiem
+      2sg: bebrykies
+      3sg: bebrykiet
+      1pl: bebrykime
+      2pl: bebrykite
+      3pl: bebrykient
   imp:
     pres:
-      - ed
-      - edste
+      2sg: ed
+      2pl: edte
     aor:
-      - bro
-      - bryte
+      2sg: bro
+      2pl: bryte
     perf:
-      - bebrok
-      - bebrykte
+      2sg: bebrok
+      2pl: bebrykte
   part:
     pres: edonts
     aor: bronts
@@ -71,65 +71,65 @@ act:
 pas:
   ind:
     pres:
-      - edar
-      - edstar
-      - edstor
-      - edmosda
-      - edsdave
-      - edentor
+      1sg: edar
+      2sg: edtar
+      3sg: edtor
+      1pl: edmosda
+      2pl: eddave
+      3pl: edentor
     impf:
-      - eda
-      - edsta
-      - edsto
-      - edmeda
-      - edsdave
-      - edento
+      1sg: eda
+      2sg: edta
+      3sg: edto
+      1pl: edmeda
+      2pl: eddave
+      3pl: edento
     aor:
-      - bro
-      - bryta
-      - bryto
-      - brymeda
-      - brydave
-      - bronto
+      1sg: bro
+      2sg: bryta
+      3sg: bryto
+      1pl: brymeda
+      2pl: brydave
+      3pl: bronto
     perf:
-      - bebryka
-      - bebrykta
-      - bebrykto
-      - bebrykmeda
-      - bebrykdave
-      - bebrykento
+      1sg: bebryka
+      2sg: bebrykta
+      3sg: bebrykto
+      1pl: bebrykmeda
+      2pl: bebrykdave
+      3pl: bebrykento
   subj:
     pres:
-      - edia
-      - edita
-      - edito
-      - edimeda
-      - edidave
-      - ediento
+      1sg: edia
+      2sg: edita
+      3sg: edito
+      1pl: edimeda
+      2pl: edidave
+      3pl: ediento
     aor:
-      - bria
-      - brita
-      - brito
-      - brimeda
-      - bridave
-      - briento
+      1sg: bria
+      2sg: brita
+      3sg: brito
+      1pl: brimeda
+      2pl: bridave
+      3pl: briento
     perf:
-      - bebrykia
-      - bebrykita
-      - bebrykito
-      - bebrykimeda
-      - bebrykidave
-      - bebrykiento
+      1sg: bebrykia
+      2sg: bebrykita
+      3sg: bebrykito
+      1pl: bebrykimeda
+      2pl: bebrykidave
+      3pl: bebrykiento
   imp:
     pres:
-      - edso
-      - edsdave
+      2sg: edso
+      2pl: eddave
     aor:
-      - bryso
-      - brydave
+      2sg: bryso
+      2pl: brydave
     perf:
-      - bebrykso
-      - bebrykdave
+      2sg: bebrykso
+      2pl: bebrykdave
   part:
     pres: edmynos
     aor: brytos

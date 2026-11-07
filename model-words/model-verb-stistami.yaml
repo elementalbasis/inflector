@@ -1,0 +1,140 @@
+act:
+  ind:
+    pres:
+      1sg: stistami
+      2sg: stistasi
+      3sg: stistati
+      1pl: stistymos
+      2pl: stistyte
+      3pl: stistanti
+    impf:
+      1sg: stistam
+      2sg: stistas
+      3sg: stistat
+      1pl: stistyme
+      2pl: stistyte
+      3pl: stistant
+    aor:
+      1sg: stam
+      2sg: stas
+      3sg: stat
+      1pl: styme
+      2pl: styte
+      3pl: stant
+    perf:
+      1sg: stestoka
+      2sg: stestokta
+      3sg: stestoke
+      1pl: stestykme
+      2pl: stestyke
+      3pl: stestyker
+  subj:
+    pres:
+      1sg: stistiem
+      2sg: stisties
+      3sg: stistiet
+      1pl: stistime
+      2pl: stistite
+      3pl: stistient
+    aor:
+      1sg: stiem
+      2sg: sties
+      3sg: stiet
+      1pl: stime
+      2pl: stite
+      3pl: stient
+    perf:
+      1sg: stestykiem
+      2sg: stestykies
+      3sg: stestykiet
+      1pl: stestykime
+      2pl: stestykite
+      3pl: stestykient
+  imp:
+    pres:
+      2sg: stista
+      2pl: stistyte
+    aor:
+      2sg: sta
+      2pl: styte
+    perf:
+      2sg: stestok
+      2pl: stestykte
+  part:
+    pres: stistants
+    aor: stants
+    perf: stestykvos
+  inf:
+    pres: stistani
+    aor: stani
+    perf: stestokni
+pas:
+  ind:
+    pres:
+      1sg: stistar
+      2sg: stistytar
+      3sg: stistytor
+      1pl: stistymosda
+      2pl: stistydave
+      3pl: stistantor
+    impf:
+      1sg: stista
+      2sg: stistyta
+      3sg: stistyto
+      1pl: stistymeda
+      2pl: stistydave
+      3pl: stistanto
+    aor:
+      1sg: sta
+      2sg: styta
+      3sg: styto
+      1pl: stymeda
+      2pl: stydave
+      3pl: stanto
+    perf:
+      1sg: stestyka
+      2sg: stestykta
+      3sg: stestykto
+      1pl: stestykmeda
+      2pl: stestykdave
+      3pl: stestykento
+  subj:
+    pres:
+      1sg: stistia
+      2sg: stistita
+      3sg: stistito
+      1pl: stistimeda
+      2pl: stistidave
+      3pl: stistiento
+    aor:
+      1sg: stia
+      2sg: stita
+      3sg: stito
+      1pl: stimeda
+      2pl: stidave
+      3pl: stiento
+    perf:
+      1sg: stestykia
+      2sg: stestykita
+      3sg: stestykito
+      1pl: stestykimeda
+      2pl: stestykidave
+      3pl: stestykiento
+  imp:
+    pres:
+      2sg: stistyso
+      2pl: stistydave
+    aor:
+      2sg: styso
+      2pl: stydave
+    perf:
+      2sg: stestykso
+      2pl: stestykdave
+  part:
+    pres: stistymnos
+    aor: stytos
+    perf: stestyktos
+  inf:
+    pres: stistymeni
+    aor: stymeni
+    perf: stestykmeni

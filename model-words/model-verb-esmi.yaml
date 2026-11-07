@@ -1,65 +1,65 @@
 act:
   ind:
     pres:
-      - esmi
-      - esi
-      - esti
-      - esmos
-      - este
-      - senti
+      1sg: esmi
+      2sg: esi
+      3sg: esti
+      1pl: esmos
+      2pl: este
+      3pl: senti
     impf:
-      - esym
-      - es
-      - est
-      - esme
-      - este
-      - sent
+      1sg: esym
+      2sg: es
+      3sg: est
+      1pl: esme
+      2pl: este
+      3pl: sent
     aor:
-      - bum
-      - bus
-      - but
-      - bume
-      - bute
-      - bunt
+      1sg: bum
+      2sg: bus
+      3sg: but
+      1pl: bume
+      2pl: bute
+      3pl: bunt
     perf:
-      - bebuka
-      - bebukta
-      - bebuke
-      - bebukme
-      - bebuke
-      - bebuker
+      1sg: bebuka
+      2sg: bebukta
+      3sg: bebuke
+      1pl: bebukme
+      2pl: bebuke
+      3pl: bebuker
   subj:
     pres:
-      - siem
-      - sies
-      - siet
-      - sime
-      - site
-      - sient
+      1sg: siem
+      2sg: sies
+      3sg: siet
+      1pl: sime
+      2pl: site
+      3pl: sient
     aor:
-      - buiem
-      - buies
-      - buiet
-      - buime
-      - buite
-      - buient
+      1sg: buiem
+      2sg: buies
+      3sg: buiet
+      1pl: buime
+      2pl: buite
+      3pl: buient
     perf:
-      - bebukiem
-      - bebukies
-      - bebukiet
-      - bebukime
-      - bebukite
-      - bebukient
+      1sg: bebukiem
+      2sg: bebukies
+      3sg: bebukiet
+      1pl: bebukime
+      2pl: bebukite
+      3pl: bebukient
   imp:
     pres:
-      - es
-      - este
+      2sg: es
+      2pl: este
     aor:
-      - bu
-      - bute
+      2sg: bu
+      2pl: bute
     perf:
-      - bebuk
-      - bebukte
+      2sg: bebuk
+      2pl: bebukte
   part:
     pres: sonts
     aor: bunts

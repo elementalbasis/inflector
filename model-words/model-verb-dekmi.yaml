@@ -1,65 +1,65 @@
 act:
   ind:
     pres:
-      - dekmi
-      - deksi
-      - dekti
-      - dykmos
-      - dykte
-      - dykenti
+      1sg: dekmi
+      2sg: deksi
+      3sg: dekti
+      1pl: dykmos
+      2pl: dykte
+      3pl: dykenti
     impf:
-      - dekym
-      - deks
-      - dekt
-      - dykmos
-      - dykte
-      - dykent
+      1sg: dekym
+      2sg: deks
+      3sg: dekt
+      1pl: dykmos
+      2pl: dykte
+      3pl: dykent
     aor:
-      - masjym
-      - masjs
-      - masjt
-      - mysjme
-      - mysjte
-      - mysjent
+      1sg: masjym
+      2sg: masjs
+      3sg: masjt
+      1pl: mysjme
+      2pl: mysjte
+      3pl: mysjent
     perf:
-      - memosja
-      - memosjta
-      - memosje
-      - memysjme
-      - memysje
-      - memysjer
+      1sg: memosja
+      2sg: memosjta
+      3sg: memosje
+      1pl: memysjme
+      2pl: memysje
+      3pl: memysjer
   subj:
     pres:
-      - dykiem
-      - dykies
-      - dykiet
-      - dykime
-      - dykite
-      - dykient
+      1sg: dykiem
+      2sg: dykies
+      3sg: dykiet
+      1pl: dykime
+      2pl: dykite
+      3pl: dykient
     aor:
-      - mysjiem
-      - mysjies
-      - mysjiet
-      - mysjime
-      - mysjite
-      - mysjient
+      1sg: mysjiem
+      2sg: mysjies
+      3sg: mysjiet
+      1pl: mysjime
+      2pl: mysjite
+      3pl: mysjient
     perf:
-      - memysjiem
-      - memysjies
-      - memysjiet
-      - memysjime
-      - memysjite
-      - memysjient
+      1sg: memysjiem
+      2sg: memysjies
+      3sg: memysjiet
+      1pl: memysjime
+      2pl: memysjite
+      3pl: memysjient
   imp:
     pres:
-      - dek
-      - dykte
+      2sg: dek
+      2pl: dykte
     aor:
-      - masj
-      - mysjte
+      2sg: masj
+      2pl: mysjte
     perf:
-      - memosj
-      - memysjte
+      2sg: memosj
+      2pl: memysjte
   part:
     pres: dykonts
     aor: mysjonts
@@ -71,65 +71,65 @@ act:
 pas:
   ind:
     pres:
-      - dykar
-      - dyktar
-      - dyktor
-      - dykmosda
-      - dykdave
-      - dykentor
+      1sg: dykar
+      2sg: dyktar
+      3sg: dyktor
+      1pl: dykmosda
+      2pl: dykdave
+      3pl: dykentor
     impf:
-      - dyka
-      - dykta
-      - dykto
-      - dykmeda
-      - dykdave
-      - dykento
+      1sg: dyka
+      2sg: dykta
+      3sg: dykto
+      1pl: dykmeda
+      2pl: dykdave
+      3pl: dykento
     aor:
-      - mysja
-      - mysjta
-      - mysjto
-      - mysjmeda
-      - mysjdave
-      - mysjento
+      1sg: mysja
+      2sg: mysjta
+      3sg: mysjto
+      1pl: mysjmeda
+      2pl: mysjdave
+      3pl: mysjento
     perf:
-      - memysja
-      - memysjta
-      - memysjto
-      - memysjmeda
-      - memysjdave
-      - memysjento
+      1sg: memysja
+      2sg: memysjta
+      3sg: memysjto
+      1pl: memysjmeda
+      2pl: memysjdave
+      3pl: memysjento
   subj:
     pres:
-      - dykia
-      - dykita
-      - dykito
-      - dykimeda
-      - dykidave
-      - dykiento
+      1sg: dykia
+      2sg: dykita
+      3sg: dykito
+      1pl: dykimeda
+      2pl: dykidave
+      3pl: dykiento
     aor:
-      - mysjia
-      - mysjita
-      - mysjito
-      - mysjimeda
-      - mysjidave
-      - mysjiento
+      1sg: mysjia
+      2sg: mysjita
+      3sg: mysjito
+      1pl: mysjimeda
+      2pl: mysjidave
+      3pl: mysjiento
     perf:
-      - memysjia
-      - memysjita
-      - memysjito
-      - memysjimeda
-      - memysjidave
-      - memysjiento
+      1sg: memysjia
+      2sg: memysjita
+      3sg: memysjito
+      1pl: memysjimeda
+      2pl: memysjidave
+      3pl: memysjiento
   imp:
     pres:
-      - dykso
-      - dykdave
+      2sg: dykso
+      2pl: dykdave
     aor:
-      - mysjso
-      - mysjdave
+      2sg: mysjso
+      2pl: mysjdave
     perf:
-      - memysjso
-      - memysjdave
+      2sg: memysjso
+      2pl: memysjdave
   part:
     pres: dykmynos
     aor: mysjtos

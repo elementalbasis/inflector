@@ -120,82 +120,161 @@ class Model:
             raise ValueError('Equally good stem boundaries produce different tables')
         return rebuild(self.table, best)
 
-
+# o-stem animate
 class Viros(Model):
     name = 'viros'
     kind = 'noun'
     endings = {'sg.nom': 'os'}
 
-
+# a-stem
 class Bena(Model):
     name = 'bena'
     kind = 'noun'
     endings = {'sg.nom': 'a'}
 
-
+# o-stem neuter
 class Donom(Model):
     name = 'donom'
     kind = 'noun'
     endings = {'sg.nom': 'om'}
 
-
+# i-stem animate
 class Mentis(Model):
     name = 'mentis'
     kind = 'noun'
     endings = {'sg.nom': 'is', 'sg.gen': 'ies'}
 
-
+# u-stem animate
 class Lokus(Model):
     name = 'lokus'
     kind = 'noun'
     endings = {'sg.nom': 'us', 'sg.gen': 'ues'}
 
-
+# n-stem
 class Nomyn(Model):
     name = 'nomyn'
     kind = 'noun'
     endings = {'sg.nom': 'yn', 'sg.gen': 'ens'}
 
+# s-stem
 class Nebos(Model):
     name = 'nebos'
     kind = 'noun'
     endings = {'sg.nom': 'os', 'sg.gen': 'esos'}
 
+# liquid stem
 class Pater(Model):
     name = 'pater'
     kind = 'noun'
     endings = {'sg.nom': 'ter', 'sg.gen': 'tres'}
 
-
+# sigmatic liquid stem
 class Svesor(Model):
     name = 'svesor'
     kind = 'noun'
     endings = {'sg.nom': 'sor', 'sg.gen': 'stres'}
 
-
+# TODO: figure out what to call this
 class Dvor(Model):
     name = 'dvor'
     kind = 'noun'
     endings = {'sg.nom': 'or', 'sg.gen': 'res'}
 
+# Regular consonantal stem
+class Ratzion(Model):
+    name = 'ratzion'
+    kind = 'noun'
+    endings = {'sg.nom': ''}
 
+# Regular adjective
 class Rudros(Model):
     name = 'rudros'
     kind = 'adjective'
     endings = {'m.sg.nom': 'os'}
 
-
+# Thematic verb
 class Bero(Model):
     name = 'bero'
     kind = 'verb'
     endings = {'act.ind.pres.1sg': 'o'}
 
-
+# Thematic latinate verb
 class Adapto(Model):
     name = 'adapto'
     kind = 'verb'
     endings = {'act.ind.pres.1sg': 'o'}
 
+# Athematic verb with sigmatic aorist
+class Megmi(Model):
+    name = 'megmi'
+    kind = 'verb'
+    endings = {'act.ind.pres.1sg': 'mi',
+               'act.ind.pres.1pl': 'mos',
+               'act.ind.aor.1sg': 'sym',
+               'act.ind.aor.1pl': 'sme',
+               'act.ind.perf.1sg': 'a',
+               'act.ind.perf.1pl': 'me',
+               }
+
+# Athematic verb with a-vocalic root, reduplicated present, and asigmatic aorist
+class Stistami(Model):
+    name = 'stistami'
+    kind = 'verb'
+    endings = {'act.ind.pres.1sg': 'mi',
+               'act.ind.pres.1pl': 'mos',
+               'act.ind.aor.1sg': 'm',
+               'act.ind.aor.1pl': 'me',
+               'act.ind.perf.1sg': 'a',
+               'act.ind.perf.1pl': 'me',
+               }
+
+# Athematic verb with o-vocalic root, reduplicated present, and asigmatic aorist
+class Didomi(Model):
+    name = 'didomi'
+    kind = 'verb'
+    endings = {'act.ind.pres.1sg': 'mi',
+               'act.ind.pres.1pl': 'mos',
+               'act.ind.aor.1sg': 'm',
+               'act.ind.aor.1pl': 'me',
+               'act.ind.perf.1sg': 'a',
+               'act.ind.perf.1pl': 'me',
+               }
+
+# Athematic verb with nu-present and asigmatic aorist
+class Lipnumi(Model):
+    name = 'lipnumi'
+    kind = 'verb'
+    endings = {'act.ind.pres.1sg': 'numi',
+               'act.ind.pres.1pl': 'numos',
+               'act.ind.aor.1sg': 'ym',
+               'act.ind.aor.1pl': 'me',
+               'act.ind.perf.1sg': 'a',
+               'act.ind.perf.1pl': 'me',
+               }
+
+# Athematic verb with i-vocalic root, nu-present, and asigmatic aorist
+class Sjlinumi(Model):
+    name = 'sjlinumi'
+    kind = 'verb'
+    endings = {'act.ind.pres.1sg': 'numi',
+               'act.ind.pres.1pl': 'numos',
+               'act.ind.aor.1sg': 'm',
+               'act.ind.aor.1pl': 'me',
+               'act.ind.perf.1sg': 'a',
+               'act.ind.perf.1pl': 'me',
+               }
+
+# Athematic verb with u-vocalic root, nu-present, and asigmatic aorist
+class Strunumi(Model):
+    name = 'strunumi'
+    kind = 'verb'
+    endings = {'act.ind.pres.1sg': 'numi',
+               'act.ind.pres.1pl': 'numos',
+               'act.ind.aor.1sg': 'm',
+               'act.ind.aor.1pl': 'me',
+               'act.ind.perf.1sg': 'a',
+               'act.ind.perf.1pl': 'me',
+               }
 
 # Add your new model class to this list.
 MODEL_CLASSES = [
@@ -209,9 +288,16 @@ MODEL_CLASSES = [
     Pater,
     Svesor,
     Dvor,
+    Ratzion,
     Rudros,
     Bero,
     Adapto,
+    Megmi,
+    Stistami,
+    Didomi,
+    Lipnumi,
+    Sjlinumi,
+    Strunumi,
 ]
 MODELS = {model.name: model for model in MODEL_CLASSES}
 
@@ -233,7 +319,7 @@ def choose_model(parts, kind=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('word', help=''word, second part' or '@key(word, second part)'')
+    parser.add_argument('word', help="'word, second part' or '@key(word, second part)'")
     parser.add_argument('--model', choices=MODELS)
     parser.add_argument('--typ', choices=('noun', 'adjective', 'verb'))
     parser.add_argument('--models', type=Path, default=Path(__file__).parent / 'model-words')

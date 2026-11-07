@@ -1,0 +1,140 @@
+act:
+  ind:
+    pres:
+      1sg: sjlinumi
+      2sg: sjlinusi
+      3sg: sjlinuti
+      1pl: sjlinumos
+      2pl: sjlinute
+      3pl: sjlinunti
+    impf:
+      1sg: sjlinum
+      2sg: sjlinus
+      3sg: sjlinut
+      1pl: sjlinume
+      2pl: sjlinute
+      3pl: sjlinunt
+    aor:
+      1sg: sjlim
+      2sg: sjlis
+      3sg: sjlit
+      1pl: sjlime
+      2pl: sjlite
+      3pl: sjlint
+    perf:
+      1sg: sjesjloika
+      2sg: sjesjloikta
+      3sg: sjesjloike
+      1pl: sjesjlikme
+      2pl: sjesjlike
+      3pl: sjesjliker
+  subj:
+    pres:
+      1sg: sjlinuiem
+      2sg: sjlinuies
+      3sg: sjlinuiet
+      1pl: sjlinuime
+      2pl: sjlinuite
+      3pl: sjlinuient
+    aor:
+      1sg: sjliem
+      2sg: sjlies
+      3sg: sjliet
+      1pl: sjlime
+      2pl: sjlite
+      3pl: sjlient
+    perf:
+      1sg: sjesjlikiem
+      2sg: sjesjlikies
+      3sg: sjesjlikiet
+      1pl: sjesjlikime
+      2pl: sjesjlikite
+      3pl: sjesjlikient
+  imp:
+    pres:
+      2sg: sjlinu
+      2pl: sjlinute
+    aor:
+      2sg: sjli
+      2pl: sjlite
+    perf:
+      2sg: sjesjloik
+      2pl: sjesjlikte
+  part:
+    pres: sjlinunts
+    aor: sjlints
+    perf: sjesjlikvos
+  inf:
+    pres: sjlinuni
+    aor: sjlini
+    perf: sjesjloikni
+pas:
+  ind:
+    pres:
+      1sg: sjlinuar
+      2sg: sjlinutar
+      3sg: sjlinutor
+      1pl: sjlinumosda
+      2pl: sjlinumeda
+      3pl: sjlinuntor
+    impf:
+      1sg: sjlinua
+      2sg: sjlinuta
+      3sg: sjlinuto
+      1pl: sjlinumeda
+      2pl: sjlinudave
+      3pl: sjlinuento
+    aor:
+      1sg: sjlia
+      2sg: sjlita
+      3sg: sjlito
+      1pl: sjlimeda
+      2pl: sjlidave
+      3pl: sjliento
+    perf:
+      1sg: sjesjlika
+      2sg: sjesjlikta
+      3sg: sjesjlikto
+      1pl: sjesjlikmeda
+      2pl: sjesjlikdave
+      3pl: sjesjlikento
+  subj:
+    pres:
+      1sg: sjlinuia
+      2sg: sjlinuita
+      3sg: sjlinuito
+      1pl: sjlinuimeda
+      2pl: sjlinuidave
+      3pl: sjlinuiento
+    aor:
+      1sg: sjlia
+      2sg: sjlita
+      3sg: sjlito
+      1pl: sjlimeda
+      2pl: sjlidave
+      3pl: sjliento
+    perf:
+      1sg: sjesjlikia
+      2sg: sjesjlikita
+      3sg: sjesjlikito
+      1pl: sjesjlikimeda
+      2pl: sjesjlikidave
+      3pl: sjesjlikiento
+  imp:
+    pres:
+      2sg: sjlinuso
+      2pl: sjlinudave
+    aor:
+      2sg: sjliso
+      2pl: sjlidave
+    perf:
+      2sg: sjesjlikso
+      2pl: sjesjlikdave
+  part:
+    pres: sjlinumnos
+    aor: sjlitos
+    perf: sjesjliktos
+  inf:
+    pres: sjlinumeni
+    aor: sjlimeni
+    perf: sjesjlikmeni

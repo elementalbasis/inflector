@@ -1,0 +1,18 @@
+sg:
+  nom: ratzion
+  voc: ratzion
+  acc: ratzionym
+  gen: ratziones
+  abl: ratzioned
+  dat: ratzionei
+  loc: ratzioni
+  ins: ratzione
+pl:
+  nom: ratziones
+  voc: ratziones
+  acc: ratzionyns
+  gen: ratzionom
+  abl: ratzionmos
+  dat: ratzionmos
+  loc: ratzionsu
+  ins: ratzionbi

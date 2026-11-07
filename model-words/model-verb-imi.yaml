@@ -1,65 +1,65 @@
 act:
   ind:
     pres:
-      - imi
-      - isi
-      - iti
-      - imos
-      - ite
-      - jenti
+      1sg: imi
+      2sg: isi
+      3sg: iti
+      1pl: imos
+      2pl: ite
+      3pl: jenti
     impf:
-      - im
-      - is
-      - it
-      - ime
-      - ite
-      - jent
+      1sg: im
+      2sg: is
+      3sg: it
+      1pl: ime
+      2pl: ite
+      3pl: jent
     aor:
-      - bem
-      - bes
-      - bet
-      - byme
-      - byte
-      - bent
+      1sg: bem
+      2sg: bes
+      3sg: bet
+      1pl: byme
+      2pl: byte
+      3pl: bent
     perf:
-      - beboka
-      - bebokta
-      - beboke
-      - bebykme
-      - bebyke
-      - bebyker
+      1sg: beboka
+      2sg: bebokta
+      3sg: beboke
+      1pl: bebykme
+      2pl: bebyke
+      3pl: bebyker
   subj:
     pres:
-      - jem
-      - jes
-      - jet
-      - ime
-      - ite
-      - jent
+      1sg: jem
+      2sg: jes
+      3sg: jet
+      1pl: ime
+      2pl: ite
+      3pl: jent
     aor:
-      - biem
-      - bies
-      - biet
-      - bime
-      - bite
-      - bient
+      1sg: biem
+      2sg: bies
+      3sg: biet
+      1pl: bime
+      2pl: bite
+      3pl: bient
     perf:
-      - bebykiem
-      - bebykies
-      - bebykiet
-      - bebykime
-      - bebykite
-      - bebykient
+      1sg: bebykiem
+      2sg: bebykies
+      3sg: bebykiet
+      1pl: bebykime
+      2pl: bebykite
+      3pl: bebykient
   imp:
     pres:
-      - i
-      - ite
+      2sg: i
+      2pl: ite
     aor:
-      - be
-      - byte
+      2sg: be
+      2pl: byte
     perf:
-      - bebok
-      - bebykte
+      2sg: bebok
+      2pl: bebykte
   part:
     pres: jonts
     aor: bonts
@@ -71,65 +71,65 @@ act:
 pas:
   ind:
     pres:
-      - jar
-      - itar
-      - itor
-      - imosda
-      - imeda
-      - jentor
+      1sg: jar
+      2sg: itar
+      3sg: itor
+      1pl: imosda
+      2pl: imeda
+      3pl: jentor
     impf:
-      - ja
-      - ita
-      - ito
-      - imeda
-      - idave
-      - jento
+      1sg: ja
+      2sg: ita
+      3sg: ito
+      1pl: imeda
+      2pl: idave
+      3pl: jento
     aor:
-      - ba
-      - byta
-      - byto
-      - bymeda
-      - bydave
-      - bento
+      1sg: ba
+      2sg: byta
+      3sg: byto
+      1pl: bymeda
+      2pl: bydave
+      3pl: bento
     perf:
-      - bebyka
-      - bebykta
-      - bebykto
-      - bebykmeda
-      - bebykdave
-      - bebykento
+      1sg: bebyka
+      2sg: bebykta
+      3sg: bebykto
+      1pl: bebykmeda
+      2pl: bebykdave
+      3pl: bebykento
   subj:
     pres:
-      - ja
-      - ita
-      - ito
-      - imeda
-      - idave
-      - jento
+      1sg: ja
+      2sg: ita
+      3sg: ito
+      1pl: imeda
+      2pl: idave
+      3pl: jento
     aor:
-      - bia
-      - bita
-      - bito
-      - bimeda
-      - bidave
-      - biento
+      1sg: bia
+      2sg: bita
+      3sg: bito
+      1pl: bimeda
+      2pl: bidave
+      3pl: biento
     perf:
-      - bebykia
-      - bebykita
-      - bebykito
-      - bebykimeda
-      - bebykidave
-      - bebykiento
+      1sg: bebykia
+      2sg: bebykita
+      3sg: bebykito
+      1pl: bebykimeda
+      2pl: bebykidave
+      3pl: bebykiento
   imp:
     pres:
-      - iso
-      - idave
+      2sg: iso
+      2pl: idave
     aor:
-      - byso
-      - bydave
+      2sg: byso
+      2pl: bydave
     perf:
-      - bebykso
-      - bebykdave
+      2sg: bebykso
+      2pl: bebykdave
   part:
     pres: imynos
     aor: bytos
