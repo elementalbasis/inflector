@@ -3,6 +3,7 @@
 from collections.abc import Mapping
 from copy import copy, deepcopy
 import unicodedata
+import re
 from itertools import product
 from pathlib import Path
 
@@ -192,6 +193,19 @@ class Ratzion(Model):
     kind = 'noun'
     endings = {'sg.nom': ''}
 
+# Regular fleeting s noun
+class Agents(Model):
+    name = 'agents'
+    kind = 'noun'
+    endings = {'sg.nom': 'nts'}
+
+    @classmethod
+    def matches(cls, parts):
+        return (
+                len(parts) == 1
+                and parts[0].endswith(('nts', 'rts', 'tats'))
+                )
+
 # Regular adjective
 class Rudros(Model):
     name = 'rudros'
@@ -306,16 +320,16 @@ class Edmi(Model):
                'act.ind.perf.1pl': 'bebrykme',
                }
 
-# Suppletive verb with an additional present 3pl principal part
+# Suppletive verb with the same six input anchors as other athematic verbs
 class Esmi(Model):
     name = 'esmi'
     kind = 'verb'
-    endings = {'act.ind.pres.1sg': 'esmi',
-               'act.ind.pres.1pl': 'esmos',
-               'act.ind.aor.1sg': 'bum',
-               'act.ind.aor.1pl': 'bute',
-               'act.ind.perf.1sg': 'bebuka',
-               'act.ind.perf.1pl': 'bebukme',
+    endings = {'act.ind.pres.1sg': 'mi',
+               'act.ind.pres.1pl': 'mos',
+               'act.ind.aor.1sg': 'm',
+               'act.ind.aor.1pl': 'me',
+               'act.ind.perf.1sg': 'a',
+               'act.ind.perf.1pl': 'me',
                }
 
 # Suppletive verb with six principal parts
@@ -343,6 +357,7 @@ MODEL_CLASSES = [
     Svesor,
     Dvor,
     Ratzion,
+    Agents,
     Rudros,
     Bero,
     Adapto,
@@ -360,19 +375,127 @@ MODEL_CLASSES = [
 MODELS = {model.name: model for model in MODEL_CLASSES}
 
 
-def choose_model(parts, kind=None):
+def choose_model(parts, kind=None, models=None):
+    """Prefer specific recognition endings over the general consonant model."""
+    registry = MODELS if models is None else models
     candidates = []
-    for name, model in MODELS.items():
+    for name, model in registry.items():
         if kind and model.kind != kind:
             continue
         if parts == [name]:
             return name
         if model.matches(parts):
-            candidates.append(name)
-    if len(candidates) != 1:
-        names = ', '.join(candidates) or 'none'
-        raise ValueError(f'Matching models: {names}. Specify --model NAME.')
-    return candidates[0]
+            candidates.append((sum(map(len, model.endings.values())), name, model))
+    if candidates:
+        best_score = max(score for score, _, _ in candidates)
+        best = [(name, model) for score, name, model in candidates if score == best_score]
+        # Aliases for the same class do not introduce a genuine ambiguity.
+        classes = {model for _, model in best}
+        if len(classes) == 1:
+            model = next(iter(classes))
+            return model.name if model.name in dict(best) else best[0][0]
+    names = ', '.join(name for _, name, _ in candidates) or 'none'
+    raise ValueError(f'Matching models: {names}. Supply a usable @infl reference.')
+
+
+NOUN_TYPES = {'noun', 'n', 'm', 'f', 'mf', 'neut', 'masc', 'fem',
+              'neuter', 'masculine', 'feminine', 'animate', 'inanimate'}
+VERB_TYPES = {'verb', 'v', 'vt', 'vi', 'vtr', 'vintr'}
+NEUTER_TYPES = {'n', 'neut', 'neuter'}
+
+
+def entry_types(entry):
+    result = set()
+    for definition in entry_field(entry, 'definitions', ()):
+        typ = entry_field(definition, 'typ')
+        if typ is None:
+            typ = entry_field(definition, 'state', {}).get('typ')
+        if typ:
+            result.update(re.findall(r'[^\W_]+', typ.casefold()))
+    return result
+
+
+def entry_kind(entry):
+    types = entry_types(entry)
+    if types & {'pron', 'pronoun', 'num', 'numeral', 'number'}:
+        return None
+    noun, verb = bool(types & NOUN_TYPES), bool(types & VERB_TYPES)
+    if noun and verb:
+        raise ValueError('Both noun and verb senses: supply an explicit @infl reference')
+    return 'noun' if noun else 'verb' if verb else None
+
+
+def thematic_parts(parts, model):
+    """Consume a thematic class marker without passing it as a stem anchor."""
+    if len(parts) == 1:
+        return parts
+    ending = 'amos' if issubclass(model, Adapto) else 'omos'
+    if (len(parts) == 2 and parts[0].endswith('o')
+            and parts[1] in ('-' + ending, parts[0][:-1] + ending)):
+        return parts[:1]
+    raise ValueError(f'{model.name}: expected one thematic lemma or its -{ending} marker')
+
+
+def infer_entry(entry, models):
+    """Return a registered model name and its normalized input parts."""
+    parts = list(entry_field(entry, 'forms'))
+    kind = entry_kind(entry)
+    if kind == 'verb':
+        if parts[0].endswith('mi'):
+            raise ValueError('Athematic verbs require @infl and six principal parts '
+                             '(prefixed compounds may inherit their model)')
+        if not parts[0].endswith('o'):
+            raise ValueError('Cannot infer a thematic verb from a lemma not ending in -o')
+        latinate = len(parts) == 2 and parts[1] in ('-amos', parts[0][:-1] + 'amos')
+        cls = Adapto if latinate else Bero
+        parts = thematic_parts(parts, cls)
+        candidates = [name for name, model in models.items() if model is cls]
+        if candidates:
+            return (cls.name if cls.name in candidates else candidates[0]), parts
+        raise ValueError(f'No registered {cls.name} model')
+    if kind != 'noun':
+        raise ValueError('No noun or verb type available for automatic inflection')
+
+    # Neuter nouns need a model with neuter nominative/accusative behavior.
+    neuter = bool(entry_types(entry) & NEUTER_TYPES)
+    registry = {name: model for name, model in models.items()
+                if model.kind == 'noun'
+                and (not neuter or model in (Donom, Nomyn, Nebos))}
+    # A redundant regular genitive can be checked after selecting by nominative.
+    if len(parts) == 2:
+        regular_genitives = {Viros: parts[0][:-2] + 'osio',
+                             Donom: parts[0][:-2] + 'osio', Bena: parts[0] + 's'}
+        for name, model in registry.items():
+            if (model in regular_genitives and model.matches(parts[:1])
+                    and parts[1] == regular_genitives[model]):
+                return name, parts[:1]
+    if len(parts) == 1:
+        lemma = parts[0]
+        for name, model in registry.items():
+            if lemma == model.name:
+                return name, parts
+        # These classes have no one-part model in the current registry. Do not
+        # silently send them through the empty-ending consonant fallback.
+        specific = any(model.matches(parts) and any(model.endings.values())
+                       for model in registry.values())
+        if not specific and lemma.endswith(('tats', 'ants', 'ents', 'onts', 'rts', 'es', 'e', 'i', 'u')):
+            raise ValueError('This noun pattern needs an additional paradigm or explicit @infl')
+        # An omitted genitive means a regular unchanged stem for productive
+        # i-, u-, and n-stems. Supplied genitives carry any ablaut instead.
+        if not specific:
+            for name, model in registry.items():
+                if model in (Mentis, Lokus, Nomyn):
+                    nom_end, gen_end = model.endings.values()
+                    if lemma.endswith(nom_end):
+                        return name, [lemma, lemma[:-len(nom_end)] + gen_end]
+        incomplete = [model for model in registry.values()
+                      if len(model.endings) > 1
+                      and lemma.endswith(next(iter(model.endings.values())))]
+        regular = any(model in (Viros, Bena, Donom) and model.matches(parts)
+                      for model in registry.values())
+        if incomplete and not specific and not regular and not lemma.endswith(('tor', 'tzion', 'sion', 'al', 'il', 'en')):
+            raise ValueError('This noun requires its genitive principal part')
+    return choose_model(parts, kind='noun', models=registry), parts
 
 
 def entry_field(entry, name, default=None):
@@ -416,6 +539,8 @@ class Inflector:
 
     @staticmethod
     def adapt(base, parts):
+        if isinstance(base, (Bero, Adapto)):
+            parts = thematic_parts(parts, type(base))
         if parts == [base.name]:
             return base.table
         if len(parts) == 1 and len(base.endings) > 1:
@@ -450,7 +575,15 @@ class Inflector:
             if reference is not None and not isinstance(reference, str):
                 raise ValueError(f'{name!r}: infl must be text')
             reference = normalized(reference) if reference is not None else ''
-            if not reference or reference == name:
+            if not reference:
+                if entry_kind(entry) is None and name in self.models:
+                    target = name
+                else:
+                    target, parts = infer_entry(entry, self.models)
+                base = (self.models[target](self.directory) if target == name
+                        else self.resolve(target, (*trail, name)))
+                result = self.derive(base, name, self.adapt(base, parts))
+            elif reference == name:
                 if name not in self.models:
                     raise ValueError(f'{name!r}: no registered model or usable @infl reference')
                 base = self.models[name](self.directory)

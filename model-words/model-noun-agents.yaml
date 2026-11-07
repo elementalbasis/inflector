@@ -1,0 +1,18 @@
+sg:
+  nom: agents
+  voc: agents
+  acc: agentym
+  gen: agentes
+  abl: agented
+  dat: agentei
+  loc: agenti
+  ins: agente
+pl:
+  nom: agentes
+  voc: agentes
+  acc: agentyns
+  gen: agentom
+  abl: agentmos
+  dat: agentmos
+  loc: agentsu
+  ins: agentbi

@@ -4,7 +4,7 @@ from pathlib import Path
 
 from lexerat import Entry, parse
 
-from inflect import Inflector
+from inflect import Inflector, entry_kind
 
 
 def load_dictionary(sources):
@@ -39,8 +39,8 @@ class InflectedEntry(Entry):
 def enrich_dictionary(entries, directory=None, models=None):
     """Return enriched copies suitable for Lexerat rendering or dataclasses.asdict.
 
-    Only lemma entries with a nonempty infl field request a table. Other
-    entries remain present, with inflections=None. Resolve against the entire
+    Infer noun and thematic-verb models from their types and forms. Explicit
+    infl references take precedence. Other entries keep inflections=None. Resolve against the entire
     dictionary, including model entries which do not themselves request tables.
     """
     entries = list(entries)
@@ -49,9 +49,11 @@ def enrich_dictionary(entries, directory=None, models=None):
     for entry in entries:
         data = {field.name: getattr(entry, field.name) for field in fields(Entry)}
         table = None
-        if entry.kind == 'lemma' and entry.infl and entry.infl.strip():
+        if entry.kind == 'lemma':
             try:
-                table = inflector.inflect(entry.lemma)
+                explicit = entry.infl and entry.infl.strip()
+                if explicit or entry_kind(entry) in ('noun', 'verb'):
+                    table = inflector.inflect(entry.lemma)
             except ValueError as error:
                 raise ValueError(f'Inflecting {entry.lemma!r}: {error}') from error
         enriched[id(entry)] = InflectedEntry(**data, inflections=table)
